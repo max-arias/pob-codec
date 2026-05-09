@@ -10,15 +10,15 @@
     "path-of-exile",
     "pob"
   ],
-  "homepage": "https://github.com/your-org/pob-codec#readme",
+  "homepage": "https://github.com/max-arias/pob-codec#readme",
   "bugs": {
-    "url": "https://github.com/your-org/pob-codec/issues"
+    "url": "https://github.com/max-arias/pob-codec/issues"
   },
   "license": "MIT",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/pob-codec.git"
+    "url": "git+https://github.com/max-arias/pob-codec.git"
   },
   "files": [
     "dist"

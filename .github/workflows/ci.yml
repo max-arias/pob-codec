@@ -9,15 +9,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+
+      - uses: voidzero-dev/setup-vp@v1
         with:
           node-version: 22
-          cache: npm
-      - name: Install VitePlus
-        run: curl -fsSL https://vite.plus | bash
+          cache: true
+          run-install: false
+
       - name: Install dependencies
-        run: vp install
+        run: vp install --frozen-lockfile
       - name: Check
         run: vp check
       - name: Test

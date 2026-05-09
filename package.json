@@ -1,0 +1,86 @@
+{
+  "name": "pob-codec",
+  "version": "0.0.0-development",
+  "description": "Encode and decode Path of Building export codes.",
+  "keywords": [
+    "base64",
+    "codec",
+    "deflate",
+    "path-of-building",
+    "path-of-exile",
+    "pob"
+  ],
+  "homepage": "https://github.com/your-org/pob-codec#readme",
+  "bugs": {
+    "url": "https://github.com/your-org/pob-codec/issues"
+  },
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/pob-codec.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "vp pack",
+    "check": "vp check",
+    "format": "vp fmt",
+    "lint": "vp lint",
+    "test": "vp test",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.0",
+    "@semantic-release/npm": "^13.1.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/node": "^24.0.0",
+    "@types/pako": "^2.0.3",
+    "semantic-release": "^25.0.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4",
+    "vite-plus": "^0.1.20",
+    "vitest": "^4.0.15"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json",
+            "pnpm-lock.yaml"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "packageManager": "pnpm@11.0.9"
+}

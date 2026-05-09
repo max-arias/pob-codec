@@ -1,6 +1,6 @@
 {
   "name": "@max-arias/pob-codec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encode and decode Path of Building export codes.",
   "keywords": [
     "base64",

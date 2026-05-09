@@ -38,9 +38,9 @@
   },
   "scripts": {
     "build": "vp pack",
-    "check": "vp check",
-    "format": "vp fmt",
-    "lint": "vp lint",
+    "check": "vp check src tests package.json vite.config.ts tsconfig.json README.md",
+    "format": "vp fmt src tests package.json vite.config.ts tsconfig.json README.md",
+    "lint": "vp lint src tests package.json vite.config.ts tsconfig.json README.md",
     "test": "vp test",
     "release": "semantic-release"
   },

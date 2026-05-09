@@ -1,5 +1,5 @@
 {
-  "name": "pob-codec",
+  "name": "@max-arias/pob-codec",
   "version": "0.0.0-development",
   "description": "Encode and decode Path of Building export codes.",
   "keywords": [
@@ -32,6 +32,9 @@
       "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "vp pack",
@@ -71,7 +74,7 @@
       [
         "@semantic-release/github",
         {
-          "failComment": false
+          "failCommentCondition": false
         }
       ],
       [
